@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 48, 48);
+    perspective: 90rem;
+    perspective-origin: 34% 61%;
+}
+
+img {
+    width: 160px;
+}
+
+button {
+    cursor: pointer;
+    outline: 0;
+    width: 180px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: rgb(48, 48, 48);
+    margin-top: 40px;
+    transform: scale(.7);
+}
+
+button::after {
+    content: "";
+    position: relative;
+    top: -40px;
+    display: block;
+    width: 48px;
+    height: 107%;
+    background-color: #000;
+    margin-top: -1px;
+    margin-left: -7px;
+    border-radius: 6px 0 0 6px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/27/White_check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 46px;
+    margin-left: -7px;
+    margin-top: -1px;
+    transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+}
+
+button div::before {
+    content: "Select";
+}
+
+.card-1:hover button::before {
+    width: 120%;
+    opacity: .8;
+    background-color: gray;
+    border-radius: 8px;
+}
+
+.card-2:hover button::before {
+    width: 120%;
+    opacity: .8;
+    background-color: gray;
+    border-radius: 8px;
+}
+
+.card-3:hover button::before {
+    width: 120%;
+    opacity: .8;
+    background-color: gray;
+    border-radius: 8px;
+}
+
+.card-4:hover button::before {
+    width: 120%;
+    opacity: .8;
+    background-color: gray;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 100vh;
+    margin-left: 6vw;
+    transform: rotateX(23deg) rotateZ(-9deg) rotateY(15deg) scale3d(1, 1, -0.9);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all .3s ease-out;
+    will-change: transform;
+}
+
+.card:hover .cover {
+    transform: translateY(-14px) scale(1.04);
+}
+
+.card-1 button {
+    border: 1px solid gray;
+    color: #fff;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+}
+
+.card-1 button::after {
+    content: "";
+    background-color: gray;
+    top: -85px
+}
+
+.card-2 button {
+    border: 1px solid gray;
+    color: #fff;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+}
+
+.card-2 button::after {
+    content: "";
+    background-color: gray;
+    top: -85px
+}
+
+.card-3 button {
+    border: 1px solid gray;
+    color: #fff;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+}
+
+.card-3 button::after {
+    content: "";
+    background-color: gray;
+    top: -85px
+}
+
+.card-4 button {
+    border: 1px solid gray;
+    color: #fff;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+}
+
+.card-4 button::after {
+    content: "";
+    background-color: gray;
+    top: -85px
+}
+
+.cover {
+    transition: all 400ms ease-in-out;
+    will-change: transform;
+}
+
+.cover img {
+    transition: all 260ms ease-in-out;
+}
+
+.card .cover::after {
+    content: "";
+    z-index: -99;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    display: block;
+    width: 160px;
+    height: 214px;
+    opacity: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 160px 214px;
+    filter: blur(24px);
+    transition: all 260ms ease-in-out;
+    will-change: transform;
+    transform: scale(.6);
+}
+
+.card:hover .cover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-1 .cover::after {
+    background-image: url('cards/ace_of_hearts.png');
+}
+
+.card-2 .cover::after {
+    background-image: url('cards/ace_of_diamonds.png');
+}
+
+.card-3 .cover::after {
+    background-image: url('cards/ace_of_clubs.png');
+}
+
+.card-4 .cover::after {
+    background-image: url('cards/ace_of_spades2.png');
+}
+
+.card-1 button div::before {
+    position: relative;
+    top: -44px;
+    left: -4px;
+    color: gray;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.card-1:hover button div::before {
+    color: #fff;
+}
+
+.card-2 button div::before {
+    position: relative;
+    top: -44px;
+    left: -6px;
+    color: gray;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.card-2:hover button div::before {
+    color: #fff;
+}
+
+.card-3 button div::before {
+    position: relative;
+    top: -44px;
+    left: 3px;
+    color: gray;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.card-3:hover button div::before {
+    color: #fff;
+}
+
+.card-4 button div::before {
+    position: relative;
+    top: -44px;
+    left: -9px;
+    color: gray;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.card-4:hover button div::before {
+    color: #fff;
+}
